@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+#header {
+    height: 20vh;
+    display: float;
+}
+
+#logo {
+    float: left;
+    width: 100px;
+    height: 70px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+#btn-menu {
+    float: right;
+    display: none;
+}
+
+.container .btn-menu {
+    float: right;
+    line-height: 70px;
+}
+
+label {
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.container .btn-menu label {
+    float: right;
+    color: #c2c2c2;
+    font-size: 50px;
+    cursor: pointer;
+    
+}
+
+.container .btn-menu label:hover {
+    color: black;
+    background-color: #bbb; /* Agregar un color de fondo blanco o el color que desees */
+    opacity: 0.7;
+    border-radius: 50%; /* Agregar un radio de borde del 50% para que se vea redondo */   
+    text-align: center; /* Alinear el texto en el centro del botón */
+    line-height: 70px; /* Ajustar la altura de línea para centrar verticalmente el texto */
+}
+.container-menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked~.container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    float: right;
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/*TERMINA EL HEADER*/
+
+#article {
+    height: 80vh;
+}
+
+main {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+}
+
+.item {
+    height: 100%;
+    flex: 1;
+    margin: 0px;
+    border-left: 1px solid #1c1c1c;
+    text-align: center;
+    line-height: 35vh;
+    /*  LINE-HEIGHT TRABAJA CON EL HEIGHT DEL MAIN PARA CENTRARLO EN BASE A UN ALTO*/
+}
+
+/*PROPIEDADES PARA COLOCAR IMAGENES DENTRO DE LOS <DIV> DE EL <MAIN>*/
+
+main div {
+    overflow: hidden;
+}
+
+main div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main div img {
+    width: 100%;
+    max-height: 100%;
+}
+
+footer {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    background: #0b1721;
+}
+
+.footer {
+    flex: 1;
+    margin: 0px;
+    text-align: left;
+}
+
+form {
+    width: 100%;
+    height: 200px;
+    max-width: 60%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 80px;
+}
+
+/*VER SI AGREGO EL TEXTAREA*/
+form,
+#name,
+#mail,
+#telefono,
+textarea {
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: #c2c2c2;
+    padding-top: 15px;
+    border: none;
+    outline: 0px;
+    border-bottom: 2px solid #1f1f1f;
+}
+
+input {
+    padding: 2px;
+}
+
+.enviar {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: #0b1721;
+    color: #c2c2c2;
+    border-style: outset;
+    height: 30px;
+}
+
+.enviar:hover {
+    background: rgb(58, 58, 58);
+    height: 50px;
+    transition: all 0.5s;
+    color: black;
+}
+
+.enviar:not(:hover) {
+    background: #0b1721;
+    transition: all 0.8s;
+    height: 30px;
+}
+
+#mapa {
+    margin-left: 80px;
+}
+
+/*   IMAGEN DE FONDO RENDER -- SI SE USA AGREGAR <section> DE NUEVO
+section{
+    background-image:url(imagenes/renderArticle.jpg.jpg);
+    background-size: 100% 100%;
+    background-attachment:fixed ;    
+}
+*/
+
+.video {
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(70%);
+}
+
+h2 {
+    text-align: center;
+    color: #c2c2c2;
+    margin-left: -60px;
+}
+
+main .item a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+}
+
+.ref1 {
+    position: absolute;
+    left: 120px;
+}
+
+.ref2 {
+    position: absolute;
+    left: 440px;
+}
+
+.ref3 {
+    position: absolute;
+    left: 780px;
+}
+
+.ref4 {
+    position: absolute;
+    left: 1150px;
+}
+
+.center {
+    color: whitesmoke;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+
+.ref ,strong:hover{
+    color: rgb(0, 0, 0);
+    background:burlywood;
+    opacity: 0.7;
+    transition: all 0.4s ease;   
+    font-size:large;
+    font-style:italic;        
+}
+.ref ,strong:not(:hover){
+    transition: all 0.6s ease;
+}
+
+
+/* TARJETA DE PRESENTACION DE CONTACTO*/
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-left: 200px;
+  }  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
+  }  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }  
+  .flip-card-back {
+    background-color: rgb(184, 184, 132);
+    color: #F5F5F5;
+    transform: rotateY(180deg);
+  }
+  /* FIN TARJETA DE PRESENTACION*/
+
+  .fondocontacto{
+    display: flex;
+    width: 100%;
+    height: 35vh;
+    background-color: rgb(230, 230, 179);
+  }
+  .fondocontacto .p { 
+  position: absolute;
+  margin-left: 540px;  
+  margin-top: 50px;
+  }
+
+     /*BOTON DE WHATSSAP*/
+  .container-boton{    
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 999;
+    border-radius: 70%;
+    bottom: 10px;
+    right: 25px;
+    padding: 10px;
+    transition: ease 0.8s;
+    animation: efecto 1s infinite;
+}
+.container-boton:hover{
+    transition: 0.8s;
+}
+.boton{
+    width: 50px;
+    transition: ease 2s;
+}
+@keyframes efecto{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    100%{
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}
+/*FIN DE CSS DE BTN DE WP*/
+

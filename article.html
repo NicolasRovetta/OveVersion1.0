@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVE</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="imagenes/LogoOve.png" id="flaticon">
+    <script src="JavaScript.js"></script>
+</head>
+
+<body>
+
+    <video class="video" autoplay loop muted>
+        <source src="imagenes/videoValley.mp4" type="video/mp4">
+    </video>
+
+    <header id="header">
+        <!--LOGO OVE-->
+        <img src="imagenes/LogoOve.png" alt="logo de OVE" id="logo">
+
+        <!--MENU-->
+        <div class="container">
+            <div class="btn-menu">
+                <label for="btn-menu">☰</label>
+            </div>
+        </div>
+
+        <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="article.html">Inicio</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
+    </header>
+
+    <article id="article"></article>
+
+    <main>
+        <div class="item">
+            <img src="imagenes/proyectos.png" alt="imagen de proyectos" height="225px" width="100%">
+            <a href="proyectos.html" class="ref1"><strong>PROYECTOS</strong></a>
+        </div>
+        <div class="item">
+            <img src="imagenes/construcciones.avif" alt="imagen de construcciones">
+            <a href="construcciones.html" class="ref2"><strong>CONSTRUCCIONES</strong></a>
+        </div>
+        <div class="item">
+            <img src="imagenes/remodelaciones.png" alt="imagen de remodelaciones" height="225px" width="100%">
+            <a href="remodelacions.html" class="ref3"><strong>REMODELACIONES</strong></a>
+        </div>
+        <div class="item">
+            <img src="imagenes/planos.jpg" alt="imagen de planos">
+            <a href="planos.html" class="ref4"><strong>PLANOS</strong></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="center">
+            <p>
+                &copy; DNR desarrollo web <!--marca registrada-->
+            </p>
+        </div>
+        <!--MAPA-->
+
+        <div class="footer" id="mapa">
+            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+                <script src="map.js"></script>
+                <a href="https://1map.com/es/map-embed">1 Map</a>
+            </div>
+        </div>
+        <!--FORMULARIO-->
+
+        <div class="footer" id="formulario">
+            <h2>CONSULTA</h2>
+            <form>
+                <ul style="list-style: none">
+                    <li>
+                        <label class="label">Nombre</label><br>
+                        <input type="text" id="name" name="nombre" required placeholder="Juan">
+                    </li>
+                    <li>
+                        <label class="label">Correo electrónico</label><br>
+                        <input type="email" id="mail" name="e-mail" required placeholder="ejemplo@gmail.com">
+                    </li>
+                    <li>
+                        <label class="label">Telefono</label><br>
+                        <input type="text" id="telefono" name="telefono" required placeholder="11-22332244">
+                    </li>
+                    <li>
+                        <label class="label">Mensaje</label><br>
+                        <textarea id="msg" name="mensaje" placeholder="quisiera consultar sobre..."></textarea>
+                    </li>
+                    <li>
+                        <input type="submit" value="Enviar" class="enviar" />
+                    </li>
+                </ul>
+            </form>
+        </div>        
+    </footer>
+</body>
+</html>
