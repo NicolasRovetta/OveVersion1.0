@@ -1,33 +1,32 @@
-/*SLIDER D EPROYECTOS*/
+/*SLIDER DE PROYECTOS*/
+let slideIndex = 1; // Inicializa la variable slideIndex con el valor 1.
 
-let slideIndex = 1;
+document.addEventListener("DOMContentLoaded", () => showSlides(slideIndex));
+// Espera a que el DOM esté completamente cargado y luego llama a la función showSlides con slideIndex como argumento.
 
-document.addEventListener("DOMContentLoaded", function() {
-  showSlides(slideIndex);
-});
-
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+// Esta función aumenta o disminuye slideIndex según el valor de n y luego llama a showSlides.
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+// Esta función establece slideIndex en el valor de n y luego llama a showSlides.
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+
+  slideIndex = (n > slides.length) ? 1 : (n < 1) ? slides.length : n;
+  // Comprueba si slideIndex está fuera de los límites y lo ajusta si es necesario.
+
+  Array.from(slides).forEach((slide) => slide.style.display = "none");
+  Array.from(dots).forEach((dot) => dot.classList.remove("active"));
+  // Oculta todos los slides y elimina la clase "active" de todos los puntos.
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].classList.add("active");
+  // Muestra el slide actual y marca el punto correspondiente como "active".
 }
+

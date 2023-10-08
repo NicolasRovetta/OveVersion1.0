@@ -277,8 +277,8 @@ main .item a {
     transform: translate(-50%, -50%);
     opacity: 0.3;
 }
-
-.ref,
+/* ! TRANSICIONES PARA LAS PALABRAS DE EL CONTENEDOR MAIN
+/* .ref,
 strong:hover {
     color: rgb(0, 0, 0);
     background: burlywood;
@@ -287,15 +287,12 @@ strong:hover {
     font-size: large;
     font-style: italic;
 }
-
 .ref,
 strong:not(:hover) {
     transition: all 0.3s ease;
-}
-
+} */
 
 /* TARJETA DE PRESENTACION DE CONTACTO*/
-
 .flip-card {
     background-color: transparent;
     width: 300px;
